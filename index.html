@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio del salario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <fieldset>
+        <h1>Ejercicio del salario</h1>
+    
+        <form action="#" method="post">
+            <input type="text"id='nombre'> <br><br>
+            <input type="number"id='horas'> <br><br><br>
+            <button type="button" onclick="cacular_sueldo();">Calcular sueldo</button>
+        </form>
+
+        <h2 id='Resultado'></h2>
+
+    </fieldset>
+</body>
+</html>
+
+
+<script>
+
+    function cacular_sueldo(){
+       
+       var nombre =document.getElementById('nombre').value;
+       var horas = parseInt(document.getElementById('horas').value);
+       var sueldo = 0;
+       var horas_extras=0;
+       var val_horas_extras=0;
+
+       if(horas <= 40){
+            sueldo = horas*10000;
+       }
+
+       if (horas >=40){
+           horas_extras = horas-40;
+           val_horas_extras = horas_extras*15000;
+
+           sueldo = (40*10000) + val_horas_extras;
+       }
+
+       document.getElementById('Resultado').innerHTML = 'El sueldo de '+ nombre +' es '+ sueldo;
+    }
+</script>

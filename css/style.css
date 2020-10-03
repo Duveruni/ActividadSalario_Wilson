@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+input{
+    background-color: rgb(179, 226, 235);
+    font-size: 25px;
+}
+
+button{
+    border: 1px solid royalblue;
+    border-radius: 7px;
+    background-color: skyblue;
+    font-size: 20px;
+}
+
+fieldset{
+    border-radius: 7px;
+    background-color: rgba(223, 223, 223, 0.911);
+}
